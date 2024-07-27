@@ -1,0 +1,124 @@
+img {
+    width: 30%; /* Make the image full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.indent {
+    display: inline-block;
+}
+
+h1 {
+    margin-top: auto;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.hr {
+    border: 0;
+    height: 4px;
+    background-image: linear-gradient(to right, rgb(51, 200, 238) 50%, #5359d1 50%);
+    margin: -10px 0 0 20px; /* space around code */
+    width: 300px; /* Adjust top margin to bring hr closer to the h1 and left margin to align with h1 */
+}
+.hr2{
+    margin-top: 90px;
+}
+
+h2 {
+    padding: 10px;
+    text-align: center; /* Centers the text inside this box */
+    color: #ffffff;
+    position: absolute;
+    top: -25px; /* Position the box at the top of the bigger-box */
+    left: 50%; /* Position the box horizontally in the center */
+    transform: translateX(-50%); /* Center the box horizontally */
+    height: 15px;
+}
+
+/* Add a circular container for the emoji above each inner box */
+.emoji-container {
+    width: 30px; /* Diameter of the circle */
+    height: 30px;
+    border-radius: 50%; /* Makes the container circular */
+    display: flex;
+    align-items: center; /* Center emoji vertically */
+    justify-content: center; /* Center emoji horizontally */
+    position: absolute;
+    top: -40px; /* Adjust this value to position the circle properly above the box */
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid; /* Matches the border color of the inner box */
+    margin-top: -13px;
+}
+
+/* Specific border color for emoji container matching each inner box */
+.box:first-of-type + .emoji-container {
+    border-color: rgb(51, 200, 238);
+}
+
+.purple-box + .emoji-container {
+    border-color: #5359d1;
+}
+
+.box:nth-of-type(3) + .emoji-container {
+    border-color: rgb(51, 200, 238);
+}
+
+
+.container {
+    display: flex;
+    justify-content: flex-start; /* Align the boxes to the left-hand side of the container */
+    gap: 20px; /* Add space between the boxes */
+    padding: 20px;
+margin-top: 50px;
+}
+
+.bigger-box {
+    background-color: #fff;
+    border: 2px solid #d1c9c9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 150px;
+    height: 110px;
+    display: flex;
+    flex-direction: column; /* Stack inner content vertically */
+    gap: 10px;
+    position: relative;
+}
+
+.box {
+    background-color: rgb(51, 200, 238); /* Default color for inner boxes */
+    border: 2px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center; /* Centers the text inside this box */
+    color: #ffffff;
+    position: absolute;
+    top: -20px; /* Position the box at the top of the bigger-box */
+    left: 50%; /* Position the box horizontally in the center */
+    transform: translateX(-50%); /* Center the box horizontally */
+    width: calc(100% - 70px); /* Adjust width to fit inside the bigger-box */
+    height: 15px;
+}
+
+/* Specific style for the second inner box to be purple */
+.purple-box {
+    background-color: #5359d1;
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: auto 0; /* Center the ul vertically */
+    text-align: center; /* Center the ul horizontally within the bigger-box */
+    width: 100%;
+}
+
+li {
+    margin: 10px 0;
+}
